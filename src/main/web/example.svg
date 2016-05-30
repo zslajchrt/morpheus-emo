@@ -1,0 +1,160 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="100%" height="100%"
+     onload="startup(evt)"
+        >
+    <script>
+        <![CDATA[
+var q;
+var n=8
+var maxn=16
+var minn=5
+var incr=1
+var bunch
+var animate=false
+xmlns="http://www.w3.org/2000/svg"
+var O
+function startup(evt){
+ q=evt.target.ownerDocument
+ B=q.getElementById("B")
+ AN=q.getElementById("AN")
+ bunch=q.getElementById("bunch")
+}
+Col=new Array("red","magenta","blue","cyan","green","yellow","orange")
+function hilight(o,act){
+ O=q.getElementById(o)
+ if(act=="over")
+  O.setAttribute("stroke","yellow")
+ else
+  O.setAttribute("stroke","white")
+}
+function populate(n){
+ if ((n>maxn)||(n<minn)) {
+  incr=-incr
+  AN.setAttribute("style","font-size:16;visibility:visible")
+  maxn=60
+ }
+ var v=n+incr
+ var p="M 10 150 C 200 "+(5*n)+" 350 "+(300-5*n)+" 450 100"
+ B.setAttribute("d",p)
+ O.setAttribute("d",p)
+ var l=B.getTotalLength()
+ if (bunch.childNodes.length>0) DOs(bunch)
+ for (i=0;i<n+1;i++){
+  P=B.getPointAtLength(l*i/n)
+  px=Math.ceil(P.x)
+  py=Math.ceil(P.y)
+  newone=q.createElementNS(xmlns,"ellipse");
+  newone.setAttribute("cx", px);
+  newone.setAttribute("cy", py);
+  newone.setAttribute("rx", 10);
+  newone.setAttribute("ry", 6);
+  newone.setAttribute("opacity",.75);
+  newone.setAttribute("fill", Col[i%Col.length]);
+  newone.setAttribute("stroke", "black");
+  newone.setAttribute("stroke-width", "2");
+  bunch.appendChild(newone);
+ }
+
+ if (animate) window.setTimeout("populate("+v+")",10)
+}
+function DOs(s){
+ num=s.childNodes.length
+ for (i=s.childNodes.length;i>0;i--){
+  s.removeChild(s.childNodes.item(i-1));
+ }
+}
+//]]>
+    </script>
+    <!--<text id="T" x="100" y="40" style="font-size:16" fill="#820">Click on the curve several times to create points</text>-->
+    <!--<text id="AN" x="200" y="340" style="font-size:16;visibility:hidden" fill="#820" onclick="animate=!animate;populate(7)">Animate?</text>-->
+
+    <!--<path d="M 100 350 q 150 -300 300 0" stroke="blue"-->
+          <!--stroke-width="5" fill="none" />-->
+    <!--<image x="10" y="20" width="80" height="80" xlink:href="/Users/zslajchrt/Sites/meta/hairdo.svg" />-->
+    <image x="-190" y="0" width="400" height="400" xlink:href="/Users/zslajchrt/Sites/meta/hairdo.svg" />
+    <!--<image x="-320" y="-130" width="670" height="670" xlink:href="/Users/zslajchrt/Desktop/neutral.png" />-->
+
+    <!--&lt;!&ndash; M0 &ndash;&gt;-->
+    <!--<path d="M136,144 L140,52" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M1 &ndash;&gt;-->
+    <!--<path d="M109,125 L119,25" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M2 &ndash;&gt;-->
+    <!--<path d="M73,127 L79,19" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M3 &ndash;&gt;-->
+    <!--<path d="M26,152 L27,30" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M5 &ndash;&gt;-->
+    <!--<path d="M87,244 L87,170" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M6 &ndash;&gt;-->
+    <!--<path d="M36,345 L36,262" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M7 &ndash;&gt;-->
+    <!--<path d="M58,349 L92,269" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M8 &ndash;&gt;-->
+    <!--<path d="M79,358 Q119,335 147,303" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M9 &ndash;&gt;-->
+    <!--<path d="M89,382 Q133,378 155,331" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M10 &ndash;&gt;-->
+    <!--<path d="M89,411 L131,424" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M11 &ndash;&gt;-->
+    <!--<path d="M75,425 Q80,457 59,488" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M12 &ndash;&gt;-->
+    <!--<path d="M25,447 L44,493" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M14 &ndash;&gt;-->
+    <!--<path d="M99,114 Q70,137 55,159" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M15 &ndash;&gt;-->
+    <!--<path d="M8,447 L8,502" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M41 &ndash;&gt;-->
+    <!--<path d="M116,171 L116,152" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M42 &ndash;&gt;-->
+    <!--<path d="M98,171 L98,224" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; M16 &ndash;&gt;-->
+    <!--<path d="M64,399 L-10,399" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MEB6 &ndash;&gt;-->
+    <!--<path d="M14,122 L14,211" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MEB7 &ndash;&gt;-->
+    <!--<path d="M42,122 L131,235" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MEY8 &ndash;&gt;-->
+    <!--<path d="M49,165 L123,269" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MLI9 &ndash;&gt;-->
+    <!--<path d="M0,339 L0,354" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MLI10 &ndash;&gt;-->
+    <!--<path d="M43,446 L58,465" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MLI11 &ndash;&gt;-->
+    <!--<path d="M-21,449 L-21,462" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_MEY12 &ndash;&gt;-->
+    <!--<path d="M32,215 L32,175" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_TEETH_UPPER &ndash;&gt;-->
+    <!--<path d="M132,399 L135,337" stroke="red" stroke-width="5" fill="none" />-->
+    <!--&lt;!&ndash; H_TEETH_LOWER &ndash;&gt;-->
+    <!--<path d="M120,400 L110,442" stroke="red" stroke-width="5" fill="none" />-->
+
+    <!-- Eyebrow -->
+    <path d="M150,160 C119,130 80,125 32,153" stroke="black" stroke-width="5" fill="none" />
+
+    <!-- Upper Lid -->
+    <path d="M125,210 C105,174 60,178 43,212" stroke="black" stroke-width="5" fill="none" />
+
+    <!-- Lower Lid -->
+    <path d="M125,210 C56,212 80,235 43,212" stroke="black" stroke-width="5" fill="none" />
+
+    <!-- Upper Lip Joiner -->
+    <path d="M-10,399 C0,399 15,399 30,400" stroke="black" stroke-width="3" fill="none" />
+
+    <!-- Upper Lip -->
+    <path d="M15,399 C30,399 45,400 60,399" stroke="black" stroke-width="3" fill="none" />
+
+    <!-- Lower Lip -->
+    <path d="M60,399 C50,399 40,400 25,401" stroke="black" stroke-width="3" fill="none" />
+
+    <!-- Lower Lip Joiner -->
+    <path d="M40,400 C25,401 0,400 -10,401" stroke="black" stroke-width="3" fill="none" />
+
+    <!--<g onclick="populate(n=n+incr)" onmouseover="hilight('M','over')" onmouseout="hilight('M','out')">-->
+        <!--<path d="M 10 150 C 200 80 350 300 450 100" id="M"-->
+              <!--stroke="none" fill="white" stroke-width="15"/>-->
+        <!--<path d="M 10 150 C 200 80 350 300 450 100" id="B"-->
+              <!--stroke="black" fill="none" stroke-width="4"/>-->
+        <!--<g id="bunch"></g>-->
+    <!--</g>-->
+</svg>

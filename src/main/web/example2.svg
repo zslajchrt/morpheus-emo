@@ -1,0 +1,22 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="100%" height="100%"
+     x = "100"
+     onload="startup(evt)"
+        >
+
+    <path id="LowerLipJoiner" d="M32.93,429.24002 C12.0,424.2 0.0,424.2 -10.0,425.2" stroke="black" stroke-width="3" fill="none"/>
+
+    <path id="LowerLip" d="M81.25738,393.8502 C75.53322,434.62805 60.232037,434.86386 32.93,429.24002" stroke="black" stroke-width="3" fill="none"/>
+
+    <path id="UpperLip" d="M43.64071,364.26965 C65.36755,337.47354 79.51703,338.92105 81.25738,393.8502" stroke="black" stroke-width="3" fill="none"/>
+
+    <path id="UpperLipJoiner" d="M-10.0,389.5764 C0.0,389.5764 15.0,381.594 43.64071,364.26965" stroke="black" stroke-width="3" fill="none"/>
+
+    <path id="LowerLid" d="M43.0,201.2 C56.0,212.0 80.0,211.31999 125.0,210.0" stroke="black" stroke-width="3" fill="none"/>
+
+    <path id="UpperLid" d="M125.0,210.0 C105.0,193.15999 67.326,201.1332 43.0,201.2" stroke="black" stroke-width="3" fill="none"/>
+
+    <path id="Eyebrow" d="M149.93967,181.3608 C120.44207,135.05598 98.843735,166.58606 32.184696,150.4404" stroke="black" stroke-width="3" fill="none"/>
+</svg>
